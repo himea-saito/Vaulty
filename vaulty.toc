@@ -1,7 +1,0 @@
-## Interface: 90002
-## Title: Vaulty
-## Notes: Just a simple addon trying to get by.
-## Author: Himea
-## Version: 0.1
-
-vaulty.lua
