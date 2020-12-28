@@ -1,7 +1,7 @@
-## Vaulty Addon ReadMe##
+## Vaulty Addon ReadMe ##
 Author: Himea
-Version: 0.5 Beta
-Updated: 10-28-2020
+Version: 0.51 Beta
+Updated: 10-29-2020
 WoW Version: 9.0.2
 
 Vaulty will load the Great Vault UI that is normally hidden and requires you to walk to Oribos to see.

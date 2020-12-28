@@ -2,7 +2,7 @@
 ## Title: Vaulty
 ## Notes: This addon will make accessing the Great Vault frame easier.
 ## Author: Himea
-## Version: 0.5
+## Version: 0.51
 ## SavedVariables: VaultyDB
 
 embeds.xml

@@ -16,7 +16,6 @@ Vaulty = LibStub("AceAddon-3.0"):NewAddon(Vaulty, "Vaulty", "AceConsole-3.0")
 VaultyLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Vaulty", {
 	type = "data source",
     text = "Vaulty",
-    --icon = "Interface\\Icons\\INV_Chest_Cloth_17",
 	icon = "Interface\\Addons\\Vaulty\\Images\\vaulty.tga",
     OnClick = function()
         WeeklyRewardsFrame:Show()
