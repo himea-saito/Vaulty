@@ -1,7 +1,9 @@
 ## Interface: 90002
 ## Title: Vaulty
-## Notes: Just a simple addon trying to get by.
+## Notes: This addon will make accessing the Great Vault frame easier.
 ## Author: Himea
-## Version: 0.1
+## Version: 0.5
+## SavedVariables: VaultyDB
 
+embeds.xml
 vaulty.lua
