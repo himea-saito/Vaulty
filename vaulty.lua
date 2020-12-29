@@ -2,13 +2,6 @@ LoadAddOn("Blizzard_WeeklyRewards") -- Load Blizzard API
 
 local _, Vaulty = ...
 
---Create chat command
-SLASH_VAULTY1, SLASH_VAULTY2, SLASH_VAULTY3 = "/gv", "/greatvault", "/vaulty"
-
-function SlashCmdList.VAULTY(msg)
-    WeeklyRewardsFrame:Show()
-end
-
 -- Call Ace LibDBIcon Minimap library https://www.wowace.com/projects/libdbicon-1-0
 -- This section creates the minimap button using .. ^
 Vaulty = LibStub("AceAddon-3.0"):NewAddon(Vaulty, "Vaulty", "AceConsole-3.0")
@@ -18,14 +11,19 @@ VaultyLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Vaulty", {
     text = "Vaulty",
 	icon = "Interface\\Addons\\Vaulty\\Images\\vaulty.tga",
     OnClick = function()
-        WeeklyRewardsFrame:Show()
+        if WeeklyRewardsFrame:IsShown() then
+            WeeklyRewardsFrame:Hide()
+        else WeeklyRewardsFrame:Show()
+        end
     end,
 	OnTooltipShow = function(tt)
-    tt:AddLine("Vaulty")
+    tt:AddLine("|cffFFFFFFVaulty|r")
+    tt:AddLine("|cff0080FFv1.0-release|r")
     tt:AddLine(" ")
     tt:AddLine("Opens your vault.")
 	tt:AddLine(" ")
-	tt:AddLine("You can also type /vaulty, /gv, or /greatvault")
+    tt:AddLine("You can also type |cff00D1FF/vaulty|r, |cff00D1FF/gv|r, or |cff00D1FF/greatvault|r.")
+    tt:AddLine("Type |cff00D1FF/vaulty togglemapicon|r to show or hide this button.")
     end
 })
 
@@ -34,4 +32,23 @@ LibDBIcon = LibStub("LibDBIcon-1.0")
 function Vaulty:OnInitialize()
     self.db = LibStub("AceDB-3.0"):New("VaultyDB", {profile = {minimap = {hide = false,},},})
     LibDBIcon:Register("Vaulty", VaultyLDB, self.db.profile.minimap)
+    self:RegisterChatCommand('vaulty', 'VaultyCmd')
+    self:RegisterChatCommand('gv', 'VaultyCmd')
+    self:RegisterChatCommand('greatvault', 'VaultyCmd')
+end
+
+function Vaulty:VaultyCmd(input)
+    if input == "togglemapicon"
+    then self.db.profile.minimap.hide = not self.db.profile.minimap.hide
+        DEFAULT_CHAT_FRAME:AddMessage("|cff4D85E6Vaulty minimap button is now|r " .. 
+            (self.db.profile.minimap.hide and "|cffFF6B6Bhidden|r|cff4D85E6.|r" or "|cff008C80shown|r|cff4D85E6.|r"))
+        if self.db.profile.minimap.hide then LibDBIcon:Hide("Vaulty")
+        else LibDBIcon:Show("Vaulty")
+        end
+    else
+        if WeeklyRewardsFrame:IsShown() then
+            WeeklyRewardsFrame:Hide()
+        else WeeklyRewardsFrame:Show()
+        end
+    end
 end
