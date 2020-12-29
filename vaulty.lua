@@ -29,6 +29,7 @@ VaultyLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Vaulty", {
 
 LibDBIcon = LibStub("LibDBIcon-1.0")
 
+--Register commands and load settings
 function Vaulty:OnInitialize()
     self.db = LibStub("AceDB-3.0"):New("VaultyDB", {profile = {minimap = {hide = false,},},})
     LibDBIcon:Register("Vaulty", VaultyLDB, self.db.profile.minimap)
@@ -37,6 +38,7 @@ function Vaulty:OnInitialize()
     self:RegisterChatCommand('greatvault', 'VaultyCmd')
 end
 
+--Slash command function
 function Vaulty:VaultyCmd(input)
     if input == "togglemapicon"
     then self.db.profile.minimap.hide = not self.db.profile.minimap.hide
