@@ -18,7 +18,7 @@ VaultyLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Vaulty", {
     end,
 	OnTooltipShow = function(tt)
     tt:AddLine("|cffFFFFFFVaulty|r")
-    tt:AddLine("|cff0080FFv1.0-release|r")
+    tt:AddLine("|cff0080FFv1.1-release|r")
     tt:AddLine(" ")
     tt:AddLine("Opens your vault.")
 	tt:AddLine(" ")
@@ -54,3 +54,5 @@ function Vaulty:VaultyCmd(input)
         end
     end
 end
+
+--Add keybind option
