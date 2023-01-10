@@ -1,4 +1,5 @@
 LoadAddOn("Blizzard_WeeklyRewards") -- Load Blizzard API
+if _G["WeeklyRewardExpirationWarningDialog"] then _G["WeeklyRewardExpirationWarningDialog"]:Hide() end
 
 local _, Vaulty = ...
 
@@ -18,7 +19,7 @@ VaultyLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Vaulty", {
     end,
 	OnTooltipShow = function(tt)
     tt:AddLine("|cffFFFFFFVaulty|r")
-    tt:AddLine("|cff0080FFv1.2-release|r")
+    tt:AddLine("|cff0080FFv1.3-release|r")
     tt:AddLine(" ")
     tt:AddLine("Opens your vault.")
 	tt:AddLine(" ")
