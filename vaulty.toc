@@ -1,9 +1,11 @@
-## Interface: 100002
-## Title: Vaulty
+## Interface: 110002
+## Title: |cff69ccf0Vaulty|r
+## IconTexture: Interface\AddOns\Vaulty\Images\vaulty.tga
 ## Notes: This addon will make accessing the Great Vault frame easier.
 ## Author: Himea
-## Version: 1.3-release
+## Version: 1.4-release
 ## SavedVariables: VaultyDB
+## License: MIT
 
 embeds.xml
 vaulty.lua

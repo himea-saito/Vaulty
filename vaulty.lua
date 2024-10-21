@@ -1,10 +1,10 @@
-LoadAddOn("Blizzard_WeeklyRewards") -- Load Blizzard API
+C_AddOns.LoadAddOn("Blizzard_WeeklyRewards") -- Load Blizzard API
 if _G["WeeklyRewardExpirationWarningDialog"] then _G["WeeklyRewardExpirationWarningDialog"]:Hide() end
 
 local _, Vaulty = ...
 
--- Call Ace LibDBIcon Minimap library https://www.wowace.com/projects/libdbicon-1-0
--- This section creates the minimap button using .. ^
+--Call Ace LibDBIcon Minimap library https://www.wowace.com/projects/libdbicon-1-0
+--This section creates the minimap button using .. ^
 Vaulty = LibStub("AceAddon-3.0"):NewAddon(Vaulty, "Vaulty", "AceConsole-3.0")
 
 VaultyLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Vaulty", {
@@ -56,4 +56,4 @@ function Vaulty:VaultyCmd(input)
     end
 end
 
---Add keybind option
+--TODO: Add keybind option
