@@ -19,7 +19,7 @@ VaultyLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Vaulty", {
     end,
 	OnTooltipShow = function(tt)
     tt:AddLine("|cffFFFFFFVaulty|r")
-    tt:AddLine("|cff0080FFv1.3-release|r")
+    tt:AddLine("|cff0080FFv1.4.1-release|r")
     tt:AddLine(" ")
     tt:AddLine("Opens your vault.")
 	tt:AddLine(" ")

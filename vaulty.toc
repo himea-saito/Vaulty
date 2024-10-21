@@ -3,7 +3,7 @@
 ## IconTexture: Interface\AddOns\Vaulty\Images\vaulty.tga
 ## Notes: This addon will make accessing the Great Vault frame easier.
 ## Author: Himea
-## Version: 1.4-release
+## Version: 1.4.1-release
 ## SavedVariables: VaultyDB
 ## License: MIT
 

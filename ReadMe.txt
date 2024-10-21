@@ -1,6 +1,6 @@
 ## Vaulty Addon ReadMe ##
 Author: Himea
-Version: 1.4-release
+Version: 1.4.1-release
 Updated: 10/20/2024
 WoW Version: 11.0.2
 
